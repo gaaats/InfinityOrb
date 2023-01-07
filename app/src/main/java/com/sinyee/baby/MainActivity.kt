@@ -111,7 +111,7 @@ class MainActivity : AppCompatActivity(), Navigator {
                 "0" -> {
                     goToGame()
                 }
-                "2" -> {
+                "1" -> {
                     //Fb + Apps
                     initAppsFlyerLibeer(this@MainActivity)
                     while (true) {
