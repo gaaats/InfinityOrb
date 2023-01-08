@@ -9,10 +9,10 @@
 -keep class com.appsflyer.** { *; }
 -keep public class com.android.installreferrer.** { *; }
 
-## Facebook
-#-keep class com.facebook.** {
-#   *;
-#}
+# Facebook
+-keep class com.facebook.** {
+   *;
+}
 
 
 #Coroutines
@@ -29,9 +29,11 @@
 -keepattributes Signature
 -dontwarn com.squareup.okhttp.*
 
-# OkHttp
--keep class com.squareup.okhttp.** { *; }
--dontwarn com.squareup.okhttp.**
--dontwarn okhttp3.**
+
+#Volley
+-keep class com.android.volley.** { *; }
+-keep class org.apache.commons.logging.**
+-keepattributes *Annotation*
+-dontwarn org.apache.**
 
 
