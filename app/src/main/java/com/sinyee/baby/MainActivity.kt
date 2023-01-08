@@ -113,7 +113,7 @@ class MainActivity : AppCompatActivity(), Navigator {
                 }
                 "1" -> {
                     //Fb + Apps
-                    initAppsFlyerLibeer(this@MainActivity)
+                    gtkogkttkgkt()
                     while (true) {
                         if (tempNamingLoad != null && tempDeepLoad != null) {
                             Log.d("lolo", "tempDeepLoad/tempNamingLoad NOT null")
@@ -137,7 +137,6 @@ class MainActivity : AppCompatActivity(), Navigator {
                                 goToGame()
                             }
 
-
                             break
                         } else {
                             Log.d("lolo", "tempDeepLoad/tempNamingLoad == null")
@@ -147,6 +146,10 @@ class MainActivity : AppCompatActivity(), Navigator {
                 }
             }
         }
+    }
+
+    private fun gtkogkttkgkt() {
+        initAppsFlyerLibeer(this@MainActivity)
     }
 
     override fun goToVebViev(
