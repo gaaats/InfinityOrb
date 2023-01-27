@@ -228,8 +228,9 @@ class MainActivity : AppCompatActivity(), Navigator {
         AppLinkData.fetchDeferredAppLinkData(
             context
         ) { appLinkData: AppLinkData? ->
-            appLinkData?.let {
-                appLinkData.targetUri.host.toString().apply {
+
+            appLinkData.let {
+                appLinkData?.targetUri?.host.toString().apply {
                     deepLink = this
                     tempDeepLoad = this
                 }

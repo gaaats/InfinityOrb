@@ -179,7 +179,7 @@
         android:background="#F6E6AB"
         android:fontFamily="@font/opensans_extra_bold"
         android:padding="2dp"
-        android:text=": Choose your team"
+        android:text=": Make your choice"
         android:textAllCaps="true"
         android:textColor="@color/black"
         android:textSize="16sp"
