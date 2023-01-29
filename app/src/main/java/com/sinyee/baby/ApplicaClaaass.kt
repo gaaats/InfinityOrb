@@ -1,80 +1,60 @@
 package com.sinyee.baby
 
 import android.app.Application
-import androidx.annotation.Keep
-import com.google.gson.annotations.SerializedName
+import android.content.Context
+import com.my.tracker.MyTracker
 import com.onesignal.OneSignal
+import com.sinyee.baby.cococnsnns.Util.ONESIGNAL_APP_IDgttggt
+import com.sinyee.baby.cococnsnns.Util.instIdggttg
+import com.sinyee.baby.cococnsnns.Util.mtKeygtgt
+import com.sinyee.baby.cococnsnns.Util.myIdggtgt
+import com.sinyee.baby.moooodlella.appModulegtgtgtgt
+import com.sinyee.baby.moooodlella.frjgtgthgthigt
+import io.branch.referral.Branch
+import org.koin.android.ext.koin.androidContext
+import org.koin.android.ext.koin.androidLogger
+import org.koin.core.context.GlobalContext
+import org.koin.core.logger.Level
+import java.util.*
 
 class ApplicaClaaass : Application() {
 
-    fun makeCheckNamingDeepGeo(
-        naming: String?,
-        deep: String?,
-        userGeo: String,
-        listAllGeo: String,
-        checker: String
-    ): Boolean {
-        return naming!!.contains(checker) || deep!!.contains(checker) || listAllGeo.contains(userGeo)
-    }
 
     override fun onCreate() {
-        OneSignal.setLogLevel(OneSignal.LOG_LEVEL.VERBOSE, OneSignal.LOG_LEVEL.NONE)
-        OneSignal.initWithContext(this)
-        gktokgt()
-
         super.onCreate()
-    }
+        OneSignal.initWithContext(this)
+        OneSignal.setAppId(ONESIGNAL_APP_IDgttggt)
+        Branch.enableTestMode()
+        Branch.getAutoInstance(this)
 
-    private fun gktokgt() {
-        OneSignal.setAppId(oneSignalCode)
-    }
+        val shPgttggt = getSharedPreferences("SHARED_PREF", Context.MODE_PRIVATE)
+        val settingsgtgtgt = getSharedPreferences("PREFS_NAME", 0)
 
-    companion object {
+        val gttghyhyhy = MyTracker.getTrackerParams()
+        val trackerConfiggthyhy = MyTracker.getTrackerConfig()
+        val gthyhyhy = MyTracker.getInstanceId(this)
+        trackerConfiggthyhy.isTrackingLaunchEnabled = true
+        val IDINgtgt = UUID.randomUUID().toString()
 
-        const val MAIN_CHECKER = "tdb2"
+        if (settingsgtgtgt.getBoolean("my_first_time", true)) {
+            gttghyhyhy.setCustomUserId(IDINgtgt)
+            shPgttggt.edit().putString(myIdggtgt, IDINgtgt).apply()
+            shPgttggt.edit().putString(instIdggttg, gthyhyhy).apply()
+            settingsgtgtgt.edit().putBoolean("my_first_time", false).apply()
+        } else {
+            val gtgtgtIN = shPgttggt.getString(myIdggtgt, IDINgtgt)
+            gttghyhyhy.setCustomUserId(gtgtgtIN)
+        }
+        MyTracker.initTracker(mtKeygtgt, this)
 
-        const val keyMainForSharedPref = "keyMainForSharedPref"
-        const val keyForNullData = "null"
-
-        const val oneSignalCode = "9359719d-ad15-49a6-853f-113db8fdccff"
-        const val pacaaakageNameMain = "com.sinyee.baby"
-        const val appsCode = "QP5aFv7iG95eHqEHQh8x4E"
-
-        const val linkaaa1 = "http://"
-        const val linkaaa2 = "infinity"
-        const val linkaaa3 = "orb"
-        const val linkaaa4 = ".xyz/"
-        const val linkaaa5 = "const.json"
-
-        const val geoApiLink1 = "http://pro.ip-api.com/"
-        const val geoApiLink2 = "json/?key=KXgMIA7HSEcn0SV"
-
-        var keyCodeFromHost = "appsChecker"
-        var keyGeo = "geo"
-        var keyNaming: String = "c11"
-        var keyLinkaa = "link"
-        var keyMAIN_ID: String = "mainid"
-        var keyDEEPLINK: String = "d11"
+        GlobalContext.startKoin {
+            androidLogger(Level.DEBUG)
+            androidContext(this@ApplicaClaaass)
+            modules(
+                listOf(
+                    frjgtgthgthigt, appModulegtgtgtgt
+                )
+            )
+        }
     }
 }
-
-@Keep
-data class GeoDevfrfrrfrrrrrr(
-    @SerializedName("geoD")
-    val geoD: String,
-    @SerializedName("viewD")
-    val viewD: String,
-    @SerializedName("appsCheckerD")
-    val appsCheckerD: String,
-)
-
-
-@Keep
-data class CountryCodeJSfrrgttggttgttt(
-    @SerializedName("city")
-    val city: String,
-    @SerializedName("country")
-    val country: String,
-    @SerializedName("countryCode")
-    val countryCode: String,
-)

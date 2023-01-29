@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/baaack"
     android:layout_height="match_parent"
+    android:background="@drawable/baaack"
     tools:context=".AAAAFragment">
 
     <androidx.constraintlayout.widget.Guideline
@@ -13,19 +13,6 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.30" />
-
-
-    <com.airbnb.lottie.LottieAnimationView
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:id="@+id/frrffrr"
-        app:layout_constraintBottom_toTopOf="@id/img_el1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:lottie_autoPlay="true"
-        app:lottie_loop="true"
-        app:lottie_rawRes="@raw/diamond"/>
-
 
 
     <androidx.constraintlayout.widget.Guideline
@@ -38,32 +25,73 @@
 
     <ImageView
         android:id="@+id/img_el1"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:src="@drawable/c1"
-        app:layout_constraintBottom_toBottomOf="@id/guideline_hor_50fgrr"
-        app:layout_constraintEnd_toStartOf="@id/img_el2"
-        app:layout_constraintStart_toStartOf="@id/guideline_vert_05gt" />
+        android:layout_width="240dp"
+        android:layout_height="240dp"
+        android:src="@drawable/vh2"
+        app:layout_constraintBottom_toTopOf="@+id/img_elfrgtgtgtgt"
+        app:layout_constraintStart_toStartOf="@id/guideline_vert_05gt"
+        app:layout_constraintTop_toTopOf="@id/guideline_hor_05gt" />
 
+    <TextView
+        android:id="@+id/tv_big"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_black"
+        android:gravity="center"
+        android:text="*x260\nBonus"
+        android:textAllCaps="true"
+        android:textColor="#D6C1E3"
+        android:textSize="21sp"
+        app:layout_constraintTop_toBottomOf="@id/img_el1"
+        app:layout_constraintEnd_toEndOf="@id/btn_big"
+        app:layout_constraintStart_toStartOf="@id/btn_big" />
 
-    <ImageView
-        android:id="@+id/img_el2"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:src="@drawable/c2"
-        app:layout_constraintBottom_toBottomOf="@id/guideline_hor_50fgrr"
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_big"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_black"
+        android:text="super\ngame"
+        app:layout_constraintBottom_toBottomOf="@+id/img_el1"
         app:layout_constraintEnd_toEndOf="@id/guideline_vert_95gtgtt"
-        app:layout_constraintStart_toEndOf="@id/img_el1" />
+        app:layout_constraintStart_toEndOf="@+id/img_el1"
+        app:layout_constraintTop_toTopOf="@+id/img_el1" />
+
 
     <ImageView
         android:id="@+id/img_elfrgtgtgtgt"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:rotation="24"
-        android:src="@drawable/pir"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/vh1"
         app:layout_constraintBottom_toBottomOf="@id/guideline_hor_95gttg"
+        app:layout_constraintEnd_toStartOf="@+id/btn_small"
+        app:layout_constraintStart_toEndOf="@+id/img_mechanicerfgt"
+        app:layout_constraintTop_toBottomOf="@+id/img_el1" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_black"
+        android:text="play"
+        app:layout_constraintBottom_toBottomOf="@+id/img_elfrgtgtgtgt"
         app:layout_constraintEnd_toEndOf="@id/guideline_vert_95gtgtt"
-        app:layout_constraintStart_toEndOf="@id/img_el1" />
+        app:layout_constraintStart_toEndOf="@+id/img_elfrgtgtgtgt"
+        app:layout_constraintTop_toTopOf="@+id/img_elfrgtgtgtgt" />
+
+    <TextView
+        android:id="@+id/tv_small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_black"
+        android:gravity="center"
+        android:text="*x14\nBonus"
+        android:textAllCaps="true"
+        android:textColor="#D6C1E3"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/img_elfrgtgtgtgt"
+        app:layout_constraintEnd_toEndOf="@id/btn_small"
+        app:layout_constraintStart_toStartOf="@id/btn_small" />
 
 
     <androidx.constraintlayout.widget.Guideline
@@ -79,38 +107,6 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.20" />
-
-    <TextView
-        android:id="@+id/tv_team_1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="#F4F155"
-        android:layout_marginTop="8dp"
-        android:fontFamily="@font/opensans_extra_bold"
-        android:padding="4dp"
-        android:text="Team 1"
-        android:textAllCaps="true"
-        android:textColor="#252301"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@id/img_el1"
-        app:layout_constraintStart_toStartOf="@id/img_el1"
-        app:layout_constraintTop_toBottomOf="@id/img_el1" />
-
-    <TextView
-        android:id="@+id/tv_team_2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="#F4AC55"
-        android:layout_marginTop="8dp"
-        android:fontFamily="@font/opensans_extra_bold"
-        android:padding="4dp"
-        android:text="Team 2"
-        android:textAllCaps="true"
-        android:textColor="#251801"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@id/img_el2"
-        app:layout_constraintStart_toStartOf="@id/img_el2"
-        app:layout_constraintTop_toBottomOf="@id/img_el2" />
 
 
     <androidx.constraintlayout.widget.Guideline
@@ -166,29 +162,11 @@
         android:id="@+id/img_mechanicerfgt"
         android:layout_width="75dp"
         android:layout_height="75dp"
-        android:src="@drawable/loooga"
-        app:layout_constraintBottom_toBottomOf="@id/guideline_hor_85ddd"
-        app:layout_constraintStart_toStartOf="@id/guideline_vert_05gt" />
-
-    <TextView
-        android:id="@+id/juujjuujuj"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="4dp"
-        android:background="#F6E6AB"
-        android:fontFamily="@font/opensans_extra_bold"
-        android:padding="2dp"
-        android:text=": Make your choice"
-        android:textAllCaps="true"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@id/img_mechanicerfgt"
-        app:layout_constraintEnd_toEndOf="@id/guideline_vert_95gtgtt"
-        app:layout_constraintStart_toEndOf="@id/img_mechanicerfgt"
-        app:layout_constraintTop_toTopOf="@id/img_mechanicerfgt" />
-
-
+        android:src="@drawable/ggggggt"
+        app:layout_constraintBottom_toBottomOf="@+id/img_elfrgtgtgtgt"
+        app:layout_constraintEnd_toStartOf="@+id/img_elfrgtgtgtgt"
+        app:layout_constraintStart_toStartOf="@id/guideline_vert_05gt"
+        app:layout_constraintTop_toTopOf="@+id/img_elfrgtgtgtgt" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

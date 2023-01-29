@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainnnnnaaa"
+    app:startDestination="@id/maaiaiainFragment">
+
+    <fragment
+        android:id="@+id/maaiaiainFragment"
+        android:name="com.sinyee.baby.MaaiaiainFragment"
+        android:label="fragment_maaiaiain"
+        tools:layout="@layout/fragment_maaiaiain" >
+        <action
+            android:id="@+id/action_maaiaiainFragment_to_connnnuuuuyFragment"
+            app:destination="@id/connnnuuuuyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/connnnuuuuyFragment"
+        android:name="com.sinyee.baby.ConnnnuuuuyFragment"
+        android:label="fragment_connnnuuuuy"
+        tools:layout="@layout/fragment_connnnuuuuy" >
+        <action
+            android:id="@+id/action_connnnuuuuyFragment_to_seeeccMaaainFragment"
+            app:destination="@id/seeeccMaaainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/seeeccMaaainFragment"
+        android:name="com.sinyee.baby.SeeeccMaaainFragment"
+        android:label="fragment_seeecc_maaain"
+        tools:layout="@layout/fragment_seeecc_maaain" >
+        <action
+            android:id="@+id/action_seeeccMaaainFragment_to_preeeeFiifififiFragment"
+            app:destination="@id/preeeeFiifififiFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/preeeeFiifififiFragment"
+        android:name="com.sinyee.baby.PreeeeFiifififiFragment"
+        android:label="fragment_preeee_fiifififi"
+        tools:layout="@layout/fragment_preeee_fiifififi" >
+        <action
+            android:id="@+id/action_preeeeFiifififiFragment_to_fillllyllyylylFragment"
+            app:destination="@id/fillllyllyylylFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fillllyllyylylFragment"
+        android:name="com.sinyee.baby.FillllyllyylylFragment"
+        android:label="fragment_fillllyllyylyl"
+        tools:layout="@layout/fragment_fillllyllyylyl" />
+</navigation>

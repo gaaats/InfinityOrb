@@ -5,126 +5,171 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.Animation
+import android.view.animation.DecelerateInterpolator
+import android.view.animation.RotateAnimation
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
+import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
+import com.google.android.material.snackbar.Snackbar
 import com.sinyee.baby.databinding.FragmentAAAABinding
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
+import kotlin.random.Random
 
 
 class AAAAFragment : Fragment() {
-    private val names = listOf(
-        "Raa",
-        "Cleo",
-        "Gleo",
-        "Aresa",
-        "Aphina",
-        "Eva",
-        "Olivia",
-        "Emma",
-        "Charlotte",
-        "Amelia",
-        "Ava",
-        "Sophia",
-        "Isabella",
-        "Mia",
-        "Evelyn",
-        "Harper",
-        "Raya",
-        "Wrenley",
-        "Angelique",
-        "Vida",
-        "Emberlynn",
-        "Flora",
-        "Murphy",
-        "Arleth",
-        "Ocean",
-        "Oakleigh",
-        "Freyja",
-        "Mylah",
-        "Taytum",
-        "Elia",
-        "Jaylani",
-        "Zayla",
-        "Navy",
-        "Della",
-        "Clover",
-        "Nyra",
-        "Olivia",
-        "Emma",
-        "Charlotte",
-        "Amelia",
-        "Ava",
-        "Sophia",
-        "Isabella",
-        "Mia",
-        "Evelyn",
-        "Harper",
-        "Luna",
-        "Camila",
-        "Gianna",
-        "Elizabeth",
-        "Eleanor",
-        "Ella",
-        "Abigail",
-        "Sofia",
-        "Avery",
-        "Scarlett",
-        "Emily",
-        "Aria",
-        "Penelope",
-        "Chloe",
-        "Layla"
-    ).shuffled()
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        fragmentAAAABinding = FragmentAAAABinding.inflate(inflater, container, false)
-        return staaartBinding.root
+        gaaaamerBinding = FragmentAAAABinding.inflate(inflater, container, false)
+        return binding.root
     }
 
-    private var fragmentAAAABinding: FragmentAAAABinding? = null
-    private val staaartBinding get() = fragmentAAAABinding ?: throw RuntimeException("FragmentAAAABinding = null")
+
+    private val gbghyhyhyhyhy = arrayOf(700, 1000, 100, 200, 500, 155, 80, 999, 777)
+    private val hyhyjukikik = gbghyhyhyhyhy.clone()
+    private val juukiikloolikikikki = 360 / gbghyhyhyhyhy.size
+    private var hyjuujujhyhyhy = false
+    private var ggg = false
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+
         try {
-            staaartBinding.tvTeam1.text = names.random()
-            staaartBinding.tvTeam2.text = names.random()
 
-            staaartBinding.imgEl1.setOnClickListener {
-                gtkgtkgtktg()
-            }
-            staaartBinding.imgEl2.setOnClickListener {
-                gtkgtkgtktg()
+            dfeghjk()
+            binding.btnSmall.setOnClickListener {
+                if (!hyjuujujhyhyhy) {
+                    frghj()
+                    hyjuujujhyhyhy = true
+                }
             }
 
-        } catch (e: Exception){
-            efrfrgtgttg5()
+            binding.btnBig.setOnClickListener {
+                if (!ggg) {
+                    frghj222()
+                    ggg = true
+                }
+            }
+
+        } catch (e: Exception) {
+            fgthyhy555()
         }
-
 
         super.onViewCreated(view, savedInstanceState)
     }
 
-    private fun gtkgtkgtktg() {
-        findNavController().navigate(R.id.action_AAAAFragment_to_BBBBFragment)
+
+    private var gaaaamerBinding: FragmentAAAABinding? = null
+    private val binding get() = gaaaamerBinding ?: throw RuntimeException("FragmentAAAABinding = null")
+
+
+    private fun frghj() {
+        val winnerNumber = Random.nextInt(gbghyhyhyhyhy.size - 1)
+
+        val needAddRotate = (360 - winnerNumber * juukiikloolikikikki).toFloat()
+        val rotateAnimation = RotateAnimation(
+            0f,
+            (360f * gbghyhyhyhyhy.size) + needAddRotate,
+            RotateAnimation.RELATIVE_TO_SELF,
+            0.5f,
+            RotateAnimation.RELATIVE_TO_SELF,
+            0.5f
+        )
+        rotateAnimation.apply {
+            duration = 1000
+            fillAfter = true
+            interpolator = DecelerateInterpolator()
+            setAnimationListener(object : Animation.AnimationListener {
+                override fun onAnimationStart(p0: Animation?) {
+                }
+
+                override fun onAnimationEnd(p0: Animation?) {
+                    val edfrgthjk = gbghyhyhyhyhy[winnerNumber]
+                    Toast.makeText(
+                        requireContext(),
+                        "You winn $edfrgthjk$ points",
+                        Toast.LENGTH_SHORT
+                    )
+                        .show()
+                    hyjuujujhyhyhy = false
+                }
+
+                override fun onAnimationRepeat(p0: Animation?) {
+                }
+            })
+            binding.imgElfrgtgtgtgt.startAnimation(rotateAnimation)
+        }
+    }
+
+    private fun frghj222() {
+        val winnerNumber = Random.nextInt(gbghyhyhyhyhy.size - 1)
+
+        val needAddRotate = (360 - winnerNumber * juukiikloolikikikki).toFloat()
+        val rotateAnimation = RotateAnimation(
+            0f,
+            (360f * gbghyhyhyhyhy.size) + needAddRotate,
+            RotateAnimation.RELATIVE_TO_SELF,
+            0.5f,
+            RotateAnimation.RELATIVE_TO_SELF,
+            0.5f
+        )
+        rotateAnimation.apply {
+            duration = 1000
+            fillAfter = true
+            interpolator = DecelerateInterpolator()
+            setAnimationListener(object : Animation.AnimationListener {
+                override fun onAnimationStart(p0: Animation?) {
+                }
+
+                override fun onAnimationEnd(p0: Animation?) {
+                    val edfrgthjk = gbghyhyhyhyhy[winnerNumber]
+                    Toast.makeText(
+                        requireContext(),
+                        "You winn $edfrgthjk$ points",
+                        Toast.LENGTH_SHORT
+                    )
+                        .show()
+                    ggg = false
+                }
+
+                override fun onAnimationRepeat(p0: Animation?) {
+                }
+            })
+            binding.imgEl1.startAnimation(rotateAnimation)
+        }
     }
 
     override fun onDestroy() {
-        fragmentAAAABinding = null
+        gaaaamerBinding = null
         super.onDestroy()
     }
 
-    private fun efrfrgtgttg5() {
-        Toast.makeText(
-            requireContext(),
-            "Error 888...",
-            Toast.LENGTH_SHORT
-        ).show()
-        hkyhykhkykhy()
+    private fun dfeghjk() {
+        for (i in gbghyhyhyhyhy.indices) {
+            hyhyjukikik[i] = (i + 1) * juukiikloolikikikki
+        }
     }
 
-    private fun hkyhykhkykhy() {
+
+
+
+    private fun fgthyhy555() {
+        frjrfrfjrjijrfjirfjrfjr()
+        uhrfurhrfurhuhrhurf()
+    }
+
+    private fun uhrfurhrfurhuhrhurf() {
         requireActivity().onBackPressed()
+    }
+
+    private fun frjrfrfjrjijrfjirfjrfjr() {
+        Snackbar.make(
+            binding.root,
+            "There is some error, try again",
+            Snackbar.LENGTH_LONG
+        ).show()
     }
 }

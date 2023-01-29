@@ -3,14 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/baaack"
+    android:background="@drawable/grraaddda"
     android:layout_height="match_parent"
-    tools:context=".BBBBFragment">
+    tools:context=".ConnnnuuuuyFragment">
 
     <com.airbnb.lottie.LottieAnimationView
-        android:layout_width="350dp"
-        android:layout_height="350dp"
-        android:id="@+id/lot_main"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:id="@+id/lot_mainhyhyhyhyhy"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -29,7 +29,7 @@
         android:gravity="center"
         android:textSize="22sp"
         android:fontFamily="@font/montserrat_black"
-        android:text="reloading..."
+        android:text="loading all data..."
         android:textColor="#FFEB3B"
         android:textAllCaps="true"/>
 

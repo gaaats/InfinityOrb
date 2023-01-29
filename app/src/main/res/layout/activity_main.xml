@@ -7,32 +7,17 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <com.airbnb.lottie.LottieAnimationView
-        android:layout_width="300dp"
-        android:layout_height="300dp"
-        android:id="@+id/lot_mainhyhyhyhyhy"
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerView"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:defaultNavHost="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:lottie_autoPlay="true"
-        app:lottie_loop="true"
-        app:lottie_rawRes="@raw/diamond"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="60dp"
-        android:gravity="center"
-        android:textSize="22sp"
-        android:fontFamily="@font/montserrat_black"
-        android:text="loading all data..."
-        android:textColor="#FFEB3B"
-        android:textAllCaps="true"/>
-
+        app:navGraph="@navigation/mainnnnnaaa" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
