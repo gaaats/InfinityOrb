@@ -1,16 +1,15 @@
-package com.sinyee.baby
+package com.sinyee.baby.frfrrfhrfhhfr
 
 import android.app.Application
 import android.content.Context
 import com.my.tracker.MyTracker
 import com.onesignal.OneSignal
-import com.sinyee.baby.cococnsnns.Util.ONESIGNAL_APP_IDgttggt
-import com.sinyee.baby.cococnsnns.Util.instIdggttg
-import com.sinyee.baby.cococnsnns.Util.mtKeygtgt
-import com.sinyee.baby.cococnsnns.Util.myIdggtgt
+import com.sinyee.baby.cococnsnns.Jifhrfihrfhhfrhrf.gtyhujjuikikikikki
+import com.sinyee.baby.cococnsnns.Jifhrfihrfhhfrhrf.instIdggttg
+import com.sinyee.baby.cococnsnns.Jifhrfihrfhhfrhrf.gthyhyhyhyhyhy
+import com.sinyee.baby.cococnsnns.Jifhrfihrfhhfrhrf.gthhyhyhyhyhyhy
 import com.sinyee.baby.moooodlella.appModulegtgtgtgt
 import com.sinyee.baby.moooodlella.frjgtgthgthigt
-import io.branch.referral.Branch
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.GlobalContext
@@ -23,12 +22,10 @@ class ApplicaClaaass : Application() {
     override fun onCreate() {
         super.onCreate()
         OneSignal.initWithContext(this)
-        OneSignal.setAppId(ONESIGNAL_APP_IDgttggt)
-        Branch.enableTestMode()
-        Branch.getAutoInstance(this)
+        OneSignal.setAppId(gtyhujjuikikikikki)
 
-        val shPgttggt = getSharedPreferences("SHARED_PREF", Context.MODE_PRIVATE)
-        val settingsgtgtgt = getSharedPreferences("PREFS_NAME", 0)
+        val gtgthigtihgthhgt = getSharedPreferences("SHARED_PREF", Context.MODE_PRIVATE)
+        val hyhyjujukiik5 = getSharedPreferences("PREFS_NAME", 0)
 
         val gttghyhyhy = MyTracker.getTrackerParams()
         val trackerConfiggthyhy = MyTracker.getTrackerConfig()
@@ -36,16 +33,16 @@ class ApplicaClaaass : Application() {
         trackerConfiggthyhy.isTrackingLaunchEnabled = true
         val IDINgtgt = UUID.randomUUID().toString()
 
-        if (settingsgtgtgt.getBoolean("my_first_time", true)) {
+        if (hyhyjujukiik5.getBoolean("my_first_time", true)) {
             gttghyhyhy.setCustomUserId(IDINgtgt)
-            shPgttggt.edit().putString(myIdggtgt, IDINgtgt).apply()
-            shPgttggt.edit().putString(instIdggttg, gthyhyhy).apply()
-            settingsgtgtgt.edit().putBoolean("my_first_time", false).apply()
+            gtgthigtihgthhgt.edit().putString(gthhyhyhyhyhyhy, IDINgtgt).apply()
+            gtgthigtihgthhgt.edit().putString(instIdggttg, gthyhyhy).apply()
+            hyhyjujukiik5.edit().putBoolean("my_first_time", false).apply()
         } else {
-            val gtgtgtIN = shPgttggt.getString(myIdggtgt, IDINgtgt)
+            val gtgtgtIN = gtgthigtihgthhgt.getString(gthhyhyhyhyhyhy, IDINgtgt)
             gttghyhyhy.setCustomUserId(gtgtgtIN)
         }
-        MyTracker.initTracker(mtKeygtgt, this)
+        MyTracker.initTracker(gthyhyhyhyhyhy, this)
 
         GlobalContext.startKoin {
             androidLogger(Level.DEBUG)

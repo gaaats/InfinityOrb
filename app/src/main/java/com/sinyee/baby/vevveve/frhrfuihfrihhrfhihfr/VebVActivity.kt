@@ -1,4 +1,4 @@
-package com.sinyee.baby
+package com.sinyee.baby.vevveve.frhrfuihfrihhrfhihfr
 
 import android.content.Context
 import android.content.Intent
@@ -12,11 +12,11 @@ import android.util.Log
 import android.webkit.*
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.sinyee.baby.cococnsnns.Util.aps_idgtgtgt
-import com.sinyee.baby.cococnsnns.Util.linkaagtgt
-import com.sinyee.baby.cococnsnns.Util.myIdggtgt
+import com.sinyee.baby.cococnsnns.Jifhrfihrfhhfrhrf.hjohyjhyjjohyj
+import com.sinyee.baby.cococnsnns.Jifhrfihrfhhfrhrf.hyjuikkiikikkiki
+import com.sinyee.baby.cococnsnns.Jifhrfihrfhhfrhrf.gthhyhyhyhyhyhy
 import com.sinyee.baby.databinding.ActivityVebVactivityBinding
-import com.sinyee.baby.gtjigtjijgit.BeamModel
+import com.sinyee.baby.gtjigtjijgit.JOIjfrfhrfhrfhfrhfr
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import org.koin.core.qualifier.named
 import java.io.File
@@ -29,15 +29,15 @@ class VebVActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         gtgtgt = ActivityVebVactivityBinding.inflate(layoutInflater)
-        beamggtgt = WebView(this)
-        setContentView(beamggtgt)
+        bnkgtuhgtuhgthugtu = WebView(this)
+        setContentView(bnkgtuhgtuhgthugtu)
         CookieManager.getInstance().setAcceptCookie(true)
-        CookieManager.getInstance().setAcceptThirdPartyCookies(beamggtgt, true)
-        viewBeamModelgtgtgt.webSetgtgtgt(beamggtgt)
+        CookieManager.getInstance().setAcceptThirdPartyCookies(bnkgtuhgtuhgthugtu, true)
+        gtggtuigthgtuhhgt.webSetgtgtgt(bnkgtuhgtuhgthugtu)
 
-        beamggtgt.webViewClient = CustomViewgtgt()
-        beamggtgt.webChromeClient = ChromeClientgtgtgt()
-        beamggtgt.loadUrl(gthyhyhy())
+        bnkgtuhgtuhgthugtu.webViewClient = Jfrhfhfrhfrhrfhu()
+        bnkgtuhgtuhgthugtu.webChromeClient = Hifhrrfhfrh()
+        bnkgtuhgtuhgthugtu.loadUrl(gthyhyhy())
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -66,23 +66,23 @@ class VebVActivity : AppCompatActivity() {
     }
 
     private lateinit var gtgtgt: ActivityVebVactivityBinding
-    lateinit var beamggtgt: WebView
+    lateinit var bnkgtuhgtuhgthugtu: WebView
     private var gtgtgthyhyhy: ValueCallback<Array<Uri>>? = null
     private var gthyjuujujuj: String? = null
     private  val INPUT_FILE_REQUEST_CODEhyhyhyhy = 1
 
-    private val viewBeamModelgtgtgt by viewModel<BeamModel>(
+    private val gtggtuigthgtuhhgt by viewModel<JOIjfrfhrfhrfhfrhfr>(
         named("BeamModel")
     )
 
 
-    inner class CustomViewgtgt: WebViewClient() {
+    inner class Jfrhfhfrhfrhrfhu: WebViewClient() {
         override fun shouldOverrideUrlLoading(view: WebView?, url: String): Boolean {
             try {
                 if (URLUtil.isNetworkUrl(url)) {
                     return false
                 }
-                if (viewBeamModelgtgtgt.gtjogtogtjtgjig(url)) {
+                if (gtggtuigthgtuhhgt.gtjogtogtjtgjig(url)) {
 
                     val intentgtgtgt = Intent(Intent.ACTION_VIEW)
                     intentgtgtgt.data = Uri.parse(url)
@@ -124,7 +124,7 @@ class VebVActivity : AppCompatActivity() {
     }
 
 
-    inner class ChromeClientgtgtgt : WebChromeClient() {
+    inner class Hifhrrfhfrh : WebChromeClient() {
 
         override fun onShowFileChooser(
             view: WebView?,
@@ -186,24 +186,24 @@ class VebVActivity : AppCompatActivity() {
         val sharPregttggt = getSharedPreferences("SHARED_PREF",
             Context.MODE_PRIVATE)
 
-        val linkgtgtgt = sharPregttggt.getString(linkaagtgt, null)
+        val linkgtgtgt = sharPregttggt.getString(hyjuikkiikikkiki, null)
         Log.d("lolo", linkgtgtgt.toString())
-        val gttggtgtd = sharPregttggt.getString(myIdggtgt, null)
-        val afIdgtgttg = sharPregttggt.getString(aps_idgtgtgt, null)
+        val gttggtgtd = sharPregttggt.getString(gthhyhyhyhyhyhy, null)
+        val afIdgtgttg = sharPregttggt.getString(hjohyjhyjjohyj, null)
 
 
         when (sharPregttggt.getString("WebInt", null)) {
             "campaign" -> {
-                viewBeamModelgtgtgt.gtgtgtgt(afIdgtgttg.toString())
+                gtggtuigthgtuhhgt.gtgtgtgt(afIdgtgttg.toString())
             }
             "deepLink" -> {
-                viewBeamModelgtgtgt.gtgtgtgt(afIdgtgttg.toString())
+                gtggtuigthgtuhhgt.gtgtgtgt(afIdgtgttg.toString())
             }
             "deepLinkNOApps" -> {
-                viewBeamModelgtgtgt.gtgtgtgt(gttggtgtd.toString())
+                gtggtuigthgtuhhgt.gtgtgtgt(gttggtgtd.toString())
             }
             "geo" -> {
-                viewBeamModelgtgtgt.gtgtgtgt(gttggtgtd.toString())
+                gtggtuigthgtuhhgt.gtgtgtgt(gttggtgtd.toString())
             }
         }
         return gttggtgt.getString("SAVED_URL", linkgtgtgt).toString()
@@ -233,13 +233,13 @@ class VebVActivity : AppCompatActivity() {
 
     override fun onBackPressed() {
 
-        if (beamggtgt.canGoBack()) {
+        if (bnkgtuhgtuhgthugtu.canGoBack()) {
             if (gtgthyhyhyhy) {
-                beamggtgt.stopLoading()
-                beamggtgt.loadUrl(urlfifififgttg)
+                bnkgtuhgtuhgthugtu.stopLoading()
+                bnkgtuhgtuhgthugtu.loadUrl(urlfifififgttg)
             }
             this.gtgthyhyhyhy = true
-            beamggtgt.goBack()
+            bnkgtuhgtuhgthugtu.goBack()
             Handler(Looper.getMainLooper()).postDelayed({
                 gtgthyhyhyhy = false
             }, 2000)

@@ -5,12 +5,12 @@ import android.content.Context
 import android.content.SharedPreferences
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
-import com.sinyee.baby.apiii.ApiInterfacegtgtgt
-import com.sinyee.baby.apiii.CountryRepogtgtgt
 import com.sinyee.baby.apiii.DevRepogthyyuyh
-import com.sinyee.baby.apiii.HostInterfacegtgtgt
-import com.sinyee.baby.gtjigtjijgit.BeamModel
-import com.sinyee.baby.vevveve.ViMod
+import com.sinyee.baby.apiii.HIUfhrhrfhhrfhurf
+import com.sinyee.baby.apiii.ggthgthgthgtuigt.CountryRepogtgtgt
+import com.sinyee.baby.apiii.gthtgugt.HostInterfacegtgtgt
+import com.sinyee.baby.gtjigtjijgit.JOIjfrfhrfhrfhfrhfr
+import com.sinyee.baby.vevveve.JIOFjrhfrhhfrhfrhrfu
 import org.koin.android.ext.koin.androidApplication
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.core.qualifier.named
@@ -24,7 +24,7 @@ fun provideGsongtgtgt(): Gson {
 
 val frjgtgthgthigt = module {
     viewModel(named("MainModel")) {
-        ViMod(
+        JIOFjrhfrhhfrhfrhrfu(
             (get(named("CountryRep"))),
             get(named("DevRep")),
             get(named("SharedPreferences")),
@@ -32,7 +32,7 @@ val frjgtgthgthigt = module {
         )
     }
     viewModel(named("BeamModel")) {
-        BeamModel(get())
+        JOIjfrfhrfhrfhfrhfr(get())
     }
 }
 
@@ -43,9 +43,9 @@ val appModulegtgtgtgt = module {
             .create(HostInterfacegtgtgt::class.java)
     }
 
-    single<ApiInterfacegtgtgt>(named("ApiInter")) {
+    single<HIUfhrhrfhhrfhurf>(named("ApiInter")) {
         get<Retrofit>(named("RetroCountry"))
-            .create(ApiInterfacegtgtgt::class.java)
+            .create(HIUfhrhrfhhrfhurf::class.java)
     }
     single<Retrofit>(named("RetroCountry")) {
         Retrofit.Builder()

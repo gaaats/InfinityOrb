@@ -1,4 +1,4 @@
-package com.sinyee.baby
+package com.sinyee.baby.frfrrfhrfhhfr
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -9,13 +9,8 @@ import android.view.animation.Animation
 import android.view.animation.DecelerateInterpolator
 import android.view.animation.RotateAnimation
 import android.widget.Toast
-import androidx.appcompat.app.AlertDialog
-import androidx.lifecycle.lifecycleScope
-import androidx.navigation.fragment.findNavController
 import com.google.android.material.snackbar.Snackbar
 import com.sinyee.baby.databinding.FragmentAAAABinding
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
 import kotlin.random.Random
 
 

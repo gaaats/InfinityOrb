@@ -1,4 +1,4 @@
-package com.sinyee.baby
+package com.sinyee.baby.frhiuuggfrfgugfrgyrf
 
 import android.content.Context
 import android.os.Bundle
@@ -7,7 +7,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import com.sinyee.baby.vevveve.ViMod
+import com.sinyee.baby.R
+import com.sinyee.baby.vevveve.JIOFjrhfrhhfrhfrhrfu
 import org.koin.androidx.viewmodel.ext.android.activityViewModel
 import org.koin.core.qualifier.named
 
@@ -15,7 +16,7 @@ import org.koin.core.qualifier.named
 class MaaiaiainFragment : Fragment() {
     private lateinit var jgtijgtjgtjiogt: Context
 
-    val gtgtjitgjgji by activityViewModel<ViMod>(named("MainModel"))
+    val gtgtjitgjgji by activityViewModel<JIOFjrhfrhhfrhfrhrfu>(named("MainModel"))
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

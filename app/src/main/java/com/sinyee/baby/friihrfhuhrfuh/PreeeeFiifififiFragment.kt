@@ -1,4 +1,4 @@
-package com.sinyee.baby
+package com.sinyee.baby.friihrfhuhrfuh
 
 import android.content.Context
 import android.content.SharedPreferences
@@ -8,8 +8,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import com.sinyee.baby.cococnsnns.Util.appsggttg
-import com.sinyee.baby.vevveve.ViMod
+import com.sinyee.baby.R
+import com.sinyee.baby.cococnsnns.Jifhrfihrfhhfrhrf.appsggttg
+import com.sinyee.baby.vevveve.JIOFjrhfrhhfrhfrhrfu
 import org.koin.android.ext.android.inject
 import org.koin.androidx.viewmodel.ext.android.activityViewModel
 import org.koin.core.qualifier.named
@@ -27,7 +28,7 @@ class PreeeeFiifififiFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_preeee_fiifififi, container, false)
     }
 
-    val viewMainModelgttggt by activityViewModel<ViMod>(named("MainModel"))
+    val frrffrgrfgrfugrfgurfgrfgrf by activityViewModel<JIOFjrhfrhhfrhfrhrfu>(named("MainModel"))
     val sharePgtgtgt: SharedPreferences by inject(named("SharedPreferences"))
     lateinit var gttggtamp: String
     private lateinit var mContextgttggt: Context
@@ -44,8 +45,8 @@ class PreeeeFiifififiFragment : Fragment() {
         val appsCampgtgt = sharePgtgtgt.getString("appCamp", null)
 
         if (checkFlyfggt=="1" &&appsCampgtgt == null) {
-            viewMainModelgttggt.conversgtgtgtgt(mContextgttggt)
-            viewMainModelgttggt.gttggthyhyhy.observe(viewLifecycleOwner) {
+            frrffrgrfgrfugrfgurfgrfgrf.conversgtgtgtgt(mContextgttggt)
+            frrffrgrfgrfugrfgurfgrfgrf.gttggthyhyhy.observe(viewLifecycleOwner) {
                 if (it != null) {
                     gttggtamp = it.toString()
                     sharePgtgtgt.edit().putString("appCamp", gttggtamp).apply()

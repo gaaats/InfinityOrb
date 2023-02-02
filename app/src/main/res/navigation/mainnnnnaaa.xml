@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/maaiaiainFragment"
-        android:name="com.sinyee.baby.MaaiaiainFragment"
+        android:name="com.sinyee.baby.frhiuuggfrfgugfrgyrf.MaaiaiainFragment"
         android:label="fragment_maaiaiain"
         tools:layout="@layout/fragment_maaiaiain" >
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/connnnuuuuyFragment"
-        android:name="com.sinyee.baby.ConnnnuuuuyFragment"
+        android:name="com.sinyee.baby.frfrrfhrfhhfr.ConnnnuuuuyFragment"
         android:label="fragment_connnnuuuuy"
         tools:layout="@layout/fragment_connnnuuuuy" >
         <action
@@ -25,7 +25,7 @@
     </fragment>
     <fragment
         android:id="@+id/seeeccMaaainFragment"
-        android:name="com.sinyee.baby.SeeeccMaaainFragment"
+        android:name="com.sinyee.baby.vevveve.frhrfuihfrihhrfhihfr.SeeeccMaaainFragment"
         android:label="fragment_seeecc_maaain"
         tools:layout="@layout/fragment_seeecc_maaain" >
         <action
@@ -34,7 +34,7 @@
     </fragment>
     <fragment
         android:id="@+id/preeeeFiifififiFragment"
-        android:name="com.sinyee.baby.PreeeeFiifififiFragment"
+        android:name="com.sinyee.baby.friihrfhuhrfuh.PreeeeFiifififiFragment"
         android:label="fragment_preeee_fiifififi"
         tools:layout="@layout/fragment_preeee_fiifififi" >
         <action
@@ -43,7 +43,7 @@
     </fragment>
     <fragment
         android:id="@+id/fillllyllyylylFragment"
-        android:name="com.sinyee.baby.FillllyllyylylFragment"
+        android:name="com.sinyee.baby.frhrfhbrfbrfhfr.FillllyllyylylFragment"
         android:label="fragment_fillllyllyylyl"
         tools:layout="@layout/fragment_fillllyllyylyl" />
 </navigation>

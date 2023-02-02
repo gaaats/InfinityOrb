@@ -3,11 +3,37 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navaagame"
-    app:startDestination="@id/AAAAFragment">
+    app:startDestination="@id/f1Fragment">
 
     <fragment
         android:id="@+id/AAAAFragment"
-        android:name="com.sinyee.baby.AAAAFragment"
+        android:name="com.sinyee.baby.frfrrfhrfhhfr.AAAAFragment"
         android:label="fragment_a_a_a_a"
         tools:layout="@layout/fragment_a_a_a_a" />
+    <fragment
+        android:id="@+id/f1Fragment"
+        android:name="com.sinyee.baby.frhrfhbrfbrfhfr.F1Fragment"
+        android:label="fragment_f1"
+        tools:layout="@layout/fragment_f1" >
+        <action
+            android:id="@+id/action_f1Fragment_to_f2Fragment"
+            app:destination="@id/f2Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/f2Fragment"
+        android:name="com.sinyee.baby.frhrfhbrfbrfhfr.F2Fragment"
+        android:label="fragment_f2"
+        tools:layout="@layout/fragment_f2" >
+        <action
+            android:id="@+id/action_f2Fragment_to_AAAAFragment"
+            app:destination="@id/AAAAFragment" />
+        <action
+            android:id="@+id/action_f2Fragment_to_BHbbbbFragment"
+            app:destination="@id/BHbbbbFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/BHbbbbFragment"
+        android:name="com.sinyee.baby.frfrrfhrfhhfr.BHbbbbFragment"
+        android:label="fragment_b_hbbbb"
+        tools:layout="@layout/fragment_b_hbbbb" />
 </navigation>

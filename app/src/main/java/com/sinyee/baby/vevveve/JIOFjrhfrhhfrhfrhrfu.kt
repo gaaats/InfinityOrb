@@ -3,28 +3,24 @@ package com.sinyee.baby.vevveve
 import android.app.Application
 import android.content.Context
 import android.content.SharedPreferences
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.appsflyer.AFInAppEventParameterName
 import com.appsflyer.AppsFlyerConversionListener
 import com.appsflyer.AppsFlyerLib
 import com.facebook.applinks.AppLinkData
 import com.google.android.gms.ads.identifier.AdvertisingIdClient
 import com.sinyee.baby.apiii.CountryCodeJSgttg
-import com.sinyee.baby.apiii.CountryRepogtgtgt
 import com.sinyee.baby.apiii.DevRepogthyyuyh
-import com.sinyee.baby.apiii.GeoDevgtgtgt
-import com.sinyee.baby.cococnsnns.Util.APAPAPAPAPSgtgtgt
-import io.branch.referral.util.BRANCH_STANDARD_EVENT
-import io.branch.referral.util.BranchEvent
+import com.sinyee.baby.apiii.ggthgthgthgtuigt.CountryRepogtgtgt
+import com.sinyee.baby.apiii.hfruhuf.GeoDevgtgtgt
+import com.sinyee.baby.cococnsnns.Jifhrfihrfhhfrhrf.APAPAPAPAPSgtgtgt
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 
-class ViMod(
+class JIOFjrhfrhhfrhfrhrfu(
     private val gthgthiugt: CountryRepogtgtgt,
     private val hyhyhyhy: DevRepogthyyuyh,
     private val shPgtgtgt: SharedPreferences,
@@ -50,7 +46,7 @@ class ViMod(
             ghyhynjhyjhyj()
         }
         viewModelScope.launch(Dispatchers.Main) {
-            getDatagtgtgt()
+            gngtnkgtkngtngtngtnj()
         }
     }
 
@@ -59,12 +55,12 @@ class ViMod(
         get() = _mainIdgtgtgt
 
 
-    suspend fun getDatagtgtgt() {
+    suspend fun gngtnkgtkngtngtngtnj() {
         gttgjigtgt.postValue(gthgthiugt.getDat().body())
-        getDevDatagtgtgt()
+        FJiooijifr()
     }
 
-    suspend fun getDevDatagtgtgt() {
+    suspend fun FJiooijifr() {
         gtgtjiogti.postValue(hyhyhyhy.getDataDev().body())
     }
 
@@ -89,33 +85,6 @@ class ViMod(
         override fun onConversionDataSuccess(data: MutableMap<String, Any>?) {
             val gtngtkngtl = data?.get("campaign").toString()
             gtgthyhyyhjuju.postValue(gtngtkngtl)
-
-            when (data?.get(AFInAppEventParameterName.AF_CHANNEL).toString()) {
-                "ACI_Search" -> {
-                    BranchEvent(BRANCH_STANDARD_EVENT.ACHIEVE_LEVEL).setDescription("ACI_Search")
-                        .logEvent(applicationgttggt.applicationContext)
-
-                }
-                "ACI_Youtube" -> {
-                    BranchEvent(BRANCH_STANDARD_EVENT.SHARE).setDescription("ACI_Youtube")
-                        .logEvent(applicationgttggt.applicationContext)
-
-                }
-                "ACI_Display" -> {
-                    BranchEvent(BRANCH_STANDARD_EVENT.RATE).setDescription("ACI_Display")
-                        .logEvent(applicationgttggt.applicationContext)
-
-                }
-
-                else -> {
-
-
-                    BranchEvent(BRANCH_STANDARD_EVENT.VIEW_AD).setDescription("NoChannel")
-                        .logEvent(applicationgttggt.applicationContext)
-                    Log.d("Branch Check", "I'm here, branch bitch! No source though")
-                }
-
-            }
 
         }
 

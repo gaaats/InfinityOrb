@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/baaack"
-    tools:context=".AAAAFragment">
+    tools:context=".frfrrfhrfhhfr.AAAAFragment">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_hor_30"

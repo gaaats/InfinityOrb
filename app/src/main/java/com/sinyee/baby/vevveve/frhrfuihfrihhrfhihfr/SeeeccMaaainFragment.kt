@@ -1,4 +1,4 @@
-package com.sinyee.baby
+package com.sinyee.baby.vevveve.frhrfuihfrihhrfhihfr
 
 import android.content.Context
 import android.content.SharedPreferences
@@ -8,10 +8,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import com.sinyee.baby.cococnsnns.Util
-import com.sinyee.baby.cococnsnns.Util.codeCodegttgtg
-import com.sinyee.baby.cococnsnns.Util.urlMaingttgtg
-import com.sinyee.baby.vevveve.ViMod
+import com.sinyee.baby.R
+import com.sinyee.baby.cococnsnns.Jifhrfihrfhhfrhrf
+import com.sinyee.baby.cococnsnns.Jifhrfihrfhhfrhrf.gtigtgtjigt
+import com.sinyee.baby.cococnsnns.Jifhrfihrfhhfrhrf.urlMaingttgtg
+import com.sinyee.baby.vevveve.JIOFjrhfrhhfrhfrhrfu
 import org.koin.android.ext.android.inject
 import org.koin.androidx.viewmodel.ext.android.activityViewModel
 import org.koin.core.qualifier.named
@@ -27,7 +28,7 @@ class SeeeccMaaainFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_seeecc_maaain, container, false)
     }
 
-    val viewMainModelgttg by activityViewModel<ViMod>(named("MainModel"))
+    val viewMainModelgttg by activityViewModel<JIOFjrhfrhhfrhfrhrfu>(named("MainModel"))
     lateinit var countryDevgtgtgt: String
     lateinit var wvgtggt: String
     lateinit var appsgtgttg: String
@@ -56,8 +57,8 @@ class SeeeccMaaainFragment : Fragment() {
                 appsgtgttg = it.appsCheckerD
                 wvgtggt = it.viewD
 
-                ghyhyhy.edit().putString(codeCodegttgtg, countryDevgtgtgt).apply()
-                ghyhyhy.edit().putString(Util.appsggttg, appsgtgttg).apply()
+                ghyhyhy.edit().putString(gtigtgtjigt, countryDevgtgtgt).apply()
+                ghyhyhy.edit().putString(Jifhrfihrfhhfrhrf.appsggttg, appsgtgttg).apply()
                 ghyhyhy.edit().putString(urlMaingttgtg, wvgtggt).apply()
 
                 gtgthtgtigt()

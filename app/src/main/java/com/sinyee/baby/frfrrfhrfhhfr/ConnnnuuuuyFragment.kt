@@ -1,4 +1,4 @@
-package com.sinyee.baby
+package com.sinyee.baby.frfrrfhrfhhfr
 
 import android.content.Context
 import android.content.SharedPreferences
@@ -8,8 +8,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import com.sinyee.baby.cococnsnns.Util.geoCogtgt
-import com.sinyee.baby.vevveve.ViMod
+import com.sinyee.baby.R
+import com.sinyee.baby.cococnsnns.Jifhrfihrfhhfrhrf.geoCogtgt
+import com.sinyee.baby.vevveve.JIOFjrhfrhhfrhfrhrfu
 import org.koin.android.ext.android.inject
 import org.koin.androidx.viewmodel.ext.android.activityViewModel
 import org.koin.core.qualifier.named
@@ -44,7 +45,7 @@ class ConnnnuuuuyFragment : Fragment() {
 
 
     val gttggttggt: SharedPreferences by inject(named("SharedPreferences"))
-    val gtgt6gt6 by activityViewModel<ViMod>(named("MainModel"))
+    val gtgt6gt6 by activityViewModel<JIOFjrhfrhhfrhfrhrfu>(named("MainModel"))
 
     lateinit var gtgtg6t: String
 
