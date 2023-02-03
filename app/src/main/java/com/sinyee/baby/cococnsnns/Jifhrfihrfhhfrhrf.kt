@@ -2,7 +2,7 @@ package com.sinyee.baby.cococnsnns
 
 object Jifhrfihrfhhfrhrf {
     const val gtyhujjuikikikikki = "d753f68b-e348-4e5f-b5d6-c48f539ca60a"
-    val gthyhyhyhyhyhy = "86059042950042451356"
+    val gthyhyhyhyhyhy = "52422257743603937441"
     val gtgtjgtjojgtjigtjjgti = "tdb2"
     val geoCogtgt: String = "country"
     val gtigtgtjigt: String = "uff"
